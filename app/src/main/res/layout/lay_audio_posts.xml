@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="15dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/profInfoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImgFd"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/username"
+            android:scaleType="fitCenter"
+            app:shapeAppearanceOverlay="@style/clipCorners" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profileNameFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daya shknar"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/profileBadgeFd"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        name -->
+
+
+        <!--        follow button -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="@color/obg"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="@string/ad"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/audPubDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5D" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="5dp"
+            android:alpha=".3"
+            />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@null"
+            android:padding="7.5dp"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/audCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profInfoC">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/audThumb"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/corner_10" />
+
+<!--        <androidx.media3.ui.PlayerView-->
+<!--            android:id="@+id/feedVideoPlayer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/imgPostTitleFd"-->
+<!--            app:resize_mode="fit"-->
+<!--            app:show_buffering="when_playing"-->
+<!--            app:show_shuffle_button="true" />-->
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/audThumb"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--            TODO: title and other elemetns to work on
+            -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/audTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:text="this is audio book layout can you read it?"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="13dp">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:contentDescription="@string/audio_duration"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/audLength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:alpha=".3"
+                        />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="3dp"
+                        android:paddingEnd="3dp">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:contentDescription="@string/views"
+                            android:layout_marginBottom="2dp"
+                            android:padding="6dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/audViewCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/imgPostActionFd"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@null"
+                android:contentDescription="@string/know_about_it"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

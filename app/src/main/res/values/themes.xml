@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InstaClone" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.InstaClone" parent="Base.Theme.InstaClone" />
+    <style name="validIcon">
+        <item name="android:tint">@color/valid</item>
+    </style>
+
+    <style name="infoDialogStyle" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+
+    <style name="clipCorners">
+        <item name='cornerSize'>50%</item>
+    </style>
+
+    <style name="corner_10">
+        <item name='cornerSize'>10%</item>
+    </style>
+    <style name="corner_15">
+        <item name='cornerSize'>15dp</item>
+    </style>
+
+
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Hide the default search icon -->
+        <item name="searchIcon">@null</item>
+        <item name="queryBackground">@color/obg</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+
+
+</resources>

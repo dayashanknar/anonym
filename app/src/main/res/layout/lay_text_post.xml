@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="15dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/profInfoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImgFd"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/username"
+            android:scaleType="fitCenter"
+            app:shapeAppearanceOverlay="@style/clipCorners" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profileNameFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daya shknar"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/profileBadgeFd"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        name -->
+
+
+        <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+        <!--            android:id="@+id/followBtnFd"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/ripple_square"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:padding="10dp"-->
+        <!--            tools:ignore="TouchTargetSizeCheck">-->
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:text="@string/follow"-->
+        <!--                android:textColor="@color/link"-->
+        <!--                android:textStyle="bold" />-->
+
+        <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <!--        follow button -->
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/imgPostActionFd"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@null"
+            android:contentDescription="@string/know_about_it"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/textPostTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profInfoC" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/txtPostsActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPostTitle">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingHorizontal="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/textReactFd"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="13dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/like_this_post"
+                    android:padding="4.5dp"/>
+
+                <TextView
+                    android:id="@+id/textPostLikesCountFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/textCommentsCFd"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="13dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/textCommentsFd"
+                    android:layout_width="19dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:contentDescription="@string/comments"/>
+
+                <TextView
+                    android:id="@+id/textPostCommentCountFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/textScoreCFd"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="13dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="19dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:contentDescription="@string/comments" />
+
+                <TextView
+                    android:id="@+id/textScoreFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/textShareFd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/share_this_post"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/textSaveFd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/save_this_post"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:gravity="center_vertical"
+        app1:layout_constraintTop_toBottomOf="@+id/txtPostsActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="2dp"
+                android:padding="7.5dp"
+                />
+
+            <TextView
+                android:id="@+id/viewsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="89M"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="7dp"
+            android:alpha=".4"
+            />
+
+        <TextView
+            android:id="@+id/textPubDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="7dp"
+            android:text="7days ago"
+            android:textSize="12sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

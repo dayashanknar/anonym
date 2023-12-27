@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingBottom="20dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/profInfoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImgFd"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/username"
+            android:scaleType="fitCenter"
+            app:shapeAppearanceOverlay="@style/clipCorners" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/profileNameFd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/profileBadgeFd"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp"
+                android:padding="2dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        name -->
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+             />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="@color/obg"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="@string/ad"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/imgPostActionFd"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:contentDescription="@string/know_about_it"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/imgPostTitleFd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="7dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profInfoC" />
+
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/feedVideoPlayer"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPostTitleFd"
+        app:resize_mode="fixed_width"
+        app:show_buffering="when_playing"
+        app:show_shuffle_button="true" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/imgPostActionsCFd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedVideoPlayer">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingHorizontal="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/imgReactFd"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="13dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/like_this_post"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/imgPostLikesCountFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/imgCommentsCFd"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="13dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/imgCommentsFd"
+                    android:layout_width="19dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:contentDescription="@string/comments"/>
+
+                <TextView
+                    android:id="@+id/imgPostCommentCountFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/imgScoreCFd"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="13dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="19dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:contentDescription="@string/comments" />
+
+                <TextView
+                    android:id="@+id/imgScoreFd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/imgShareFd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/share_this_post"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/imgSaveFd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/save_this_post"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPostActionsCFd">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="2dp"
+                android:padding="7.5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewsCount"
+                android:text="89M"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="7dp"
+            android:alpha=".3"/>
+        <TextView
+            android:id="@+id/daysAgoFd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="7dp"
+            android:text="7days ago"
+            android:textSize="12sp" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

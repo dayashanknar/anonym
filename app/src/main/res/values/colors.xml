@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#F9F9F9</color>
+    <color name="blackTp">#9C000000</color>
+    <color name="whiteTp">#9C959595</color>
+    <color name="obg">#f0f3f4</color>
+    <color name="oobg">#ededed</color>
+    <color name="tbg">#BDBDBD</color>
+    <color name="bdr">#EAEAEA</color>
+    <color name="link">#0056EA</color>
+    <color name="warning">#FF0000</color>
+    <color name="rippleC">#BCAEAEAE</color>
+    <color name="valid">#008B46</color>
+    <color name="profileGrd">#1200C559</color>
+    <color name="fire">#FF4500</color>
+    <color name="lightPink">#FCD3D7</color>
+</resources>
