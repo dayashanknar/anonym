@@ -3,7 +3,7 @@ package com.evourse.instaclone.model
 data class Feed(
     val captionText: String,
     val commentCount: Int,
-    val contentUrl: String?,
+    val contentUrl: String? = null,
     val impressionCount: Int,
     val likeCount: Int,
     val location: String,
