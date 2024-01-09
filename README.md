@@ -21,7 +21,7 @@ This Android project is built on the MVVM (Model-View-ViewModel) architecture pa
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/instagram-feed-app.git`
+1. Clone the repository: `git clone https://github.com/dayashanknar/anonym.git`
 2. Open the project in Android Studio.
 3. Build and run the application on an emulator or physical device.
 
